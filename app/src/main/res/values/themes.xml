@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CoffeLnk" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/mocha</item>
+        <item name="colorPrimaryVariant">@color/mocha</item>
+        <item name="android:statusBarColor">@color/mocha</item>
+        <item name="android:navigationBarColor">@color/mocha</item>
+    </style>
+
+    <style name="Theme.CoffeLnk" parent="Base.Theme.CoffeLnk" />
+
+    <style name="Theme.App.CoffeLnk" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/mocha</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.CoffeLnk</item>
+    </style>
+
+    <style name="CoffeLnk.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/coklat</item>
+    </style>
+
+</resources>

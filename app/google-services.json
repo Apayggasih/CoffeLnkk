@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "700731872822",
+    "project_id": "coffelnk",
+    "storage_bucket": "coffelnk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700731872822:android:a411c3c9b8eac8e3e42a97",
+        "android_client_info": {
+          "package_name": "com.uaspm2.coffelnk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700731872822-u23mgjl0f8p27r08lrvhjkfiojrk4hgi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uaspm2.coffelnk",
+            "certificate_hash": "3eafcfc58aaa482b7b98a4297941827d623bdf91"
+          }
+        },
+        {
+          "client_id": "700731872822-duvq2ht1sqf0o56ftg83jcgec0l1tlcn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXOz-ntIhzYbR0kpI0mwy4LtI7qros-jw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700731872822-duvq2ht1sqf0o56ftg83jcgec0l1tlcn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
