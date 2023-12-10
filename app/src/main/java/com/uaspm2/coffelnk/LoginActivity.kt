@@ -32,10 +32,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-<<<<<<< HEAD
             .requestIdToken(getString(R.string.default_web_client_id))
-=======
->>>>>>> origin/Nuha-Dev
             .requestEmail()
             .build()
 

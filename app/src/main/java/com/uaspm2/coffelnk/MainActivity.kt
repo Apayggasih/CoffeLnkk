@@ -5,7 +5,11 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.recyclerview.widget.RecyclerView
+import com.uaspm2.coffelnk.adapters.ImageAdapter
 import com.uaspm2.coffelnk.databinding.ActivityMainBinding
+import com.uaspm2.coffelnk.models.ImageItem
+import java.util.UUID
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,6 +20,27 @@ class MainActivity : AppCompatActivity() {
         installSplashScreen()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val imageRV = findViewById<RecyclerView>(R.id.imageRV)
+
+        val imageList = arrayListOf(
+            ImageItem(
+                UUID.randomUUID().toString(),
+                "https://dikemas.com/uploads/2020/09/Ini-Dia-Beberapa-Jenis-Minuman-Kopi-Yang-Perlu-Kamu-Ketahui-720x442.jpg"
+            ),
+            ImageItem(
+                UUID.randomUUID().toString(),
+                "https://assets.unileversolutions.com/v1/63465882.png"
+            ),
+            ImageItem(
+                UUID.randomUUID().toString(),
+                "https://assets.unileversolutions.com/v1/63465882.png"
+            )
+        )
+
+        val imageAdapter = ImageAdapter()
+        imageRV.adapter = imageAdapter
+        imageAdapter.submitList(imageList)
 
         Handler().postDelayed({
             // Do something if needed
@@ -42,38 +67,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/Nuha-Dev
-=======
->>>>>>> 9f8cd27 (Perubahan dari fragment ke activity)
-
-//        binding.bottomNavigation.setOnItemSelectedListener {
-//            when(it.itemId) {
-//                R.id.bottom_home -> replaceFragment(HomeFragment())
-//                R.id.bottom_catalog -> replaceFragment(CatalogFragment())
-//                R.id.bottom_profile -> replaceFragment(ProfileFragment())
-//                else -> {
-//                    // Do something if needed
-//                }
-//            }
-//            true
-//        }
-//    }
-//
-//    private fun replaceFragment(fragment: Fragment){
-//        val fragmentManager = supportFragmentManager
-//        val fragmentTransaction = fragmentManager.beginTransaction()
-//        fragmentTransaction.replace(R.id.frame_container, fragment)
-//        fragmentTransaction.commit()
-//    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/Nuha-Dev
-=======
->>>>>>> 9f8cd27 (Perubahan dari fragment ke activity)
