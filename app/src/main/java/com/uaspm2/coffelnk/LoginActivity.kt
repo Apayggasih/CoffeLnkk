@@ -2,20 +2,18 @@ package com.uaspm2.coffelnk
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import kotlin.math.sign
 
 class LoginActivity : AppCompatActivity() {
     lateinit var auth: FirebaseAuth
@@ -49,6 +47,13 @@ class LoginActivity : AppCompatActivity() {
         launcher.launch(signInIntent)
     }
 
+    private fun signOutGoogle() {
+        googleSignInClient.signOut()
+            .addOnCompleteListener(this) {
+
+            }
+    }
+
     private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
             result ->
         if (result.resultCode == Activity.RESULT_OK){
@@ -75,6 +80,7 @@ class LoginActivity : AppCompatActivity() {
             if (it.isSuccessful){
                 val intent : Intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                finish()
             }else{
                 Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
             }

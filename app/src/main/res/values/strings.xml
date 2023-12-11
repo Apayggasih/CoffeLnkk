@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">CoffeLnk</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="default_web_client_id">700731872822-duvq2ht1sqf0o56ftg83jcgec0l1tlcn.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
